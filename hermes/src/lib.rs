@@ -145,7 +145,8 @@ pub struct Exercise {
     pub included_in_overall_score: String,
     pub presentation_score_enabled: bool,
     pub second_correction_enabled: bool,
-    pub student_participations: Option<Vec<StudentParticipation>>, // TODO: Turn into an empty Vec 
+    #[serde(default)]
+    pub student_participations: Vec<StudentParticipation>,
     pub publish_build_plan_url: bool,
     pub allow_online_editor: bool,
     pub allow_offline_ide: bool,

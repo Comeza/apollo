@@ -51,9 +51,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
         hermes.set_token(config.token.as_ref().unwrap());
     }
 
-
-
     println!("Projects: {}", hermes.get_for_dashboard().await?.len());
-
     Ok(())
 }
